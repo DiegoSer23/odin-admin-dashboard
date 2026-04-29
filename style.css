@@ -1,8 +1,53 @@
+@import url('https://googleapis.com');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 .container {
     
 }
 
 .header {
     display: grid;
+    grid-template-rows: 1fr 1fr;
+}
 
+.search-icon, .search-bar, .notification-icon, .cat-icon, .admin-top {
+    grid-row: 1 ;
+}
+
+.cat-icon-big, .admin-welcome-text, .new-button, .upload-button, .share-button {
+    grid-row: 2;
+}
+
+.search-icon {
+    height: 25px;
+}
+
+.notification-icon {
+    height: 25px;
+}
+
+.cat-icon {
+    height: 30px;
+}
+
+.cat-icon-big {
+    height: 50px;
+    width: 50px;
+}
+
+.new-button, .upload-button, .share-button {
+    background-color: lightblue;
+    border-radius: 15px;
+    border: none;
+    width: 100px;
+    height: 32px;
+}
+
+.search-bar {
+    background-color: #f1f1f1;
+    border-radius: 20px; 
+    border: none;
 }
