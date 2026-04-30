@@ -5,24 +5,56 @@ body {
 }
 
 .container {
-    
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 .header {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    height: 150px;
+    grid-column: 2 / 3;
+    grid-row: 1;
 }
 
-.search-icon, .search-bar, .notification-icon, .cat-icon, .admin-top {
-    grid-row: 1 ;
+.sidebar {
+    display: grid;
+    grid-column: 1;
+    grid-row: 1 / 4;
+    background-color: lightblue;
 }
 
-.cat-icon-big, .admin-welcome-text, .new-button, .upload-button, .share-button {
+.top-header-grid {
+    display: grid;
+    grid-row: 1;
+    grid-template-columns: 50px 2fr 1fr;
+    gap: 10px;
+    width: 100%;
+}
+
+.bottom-header-grid {
+    display: grid;
     grid-row: 2;
+    grid-template-columns: 100px 2fr 1fr;
+    align-items: center;
+    width: 100%;
+}
+
+.right-top-grid {
+    display: grid;
+    grid-column: 3;
+    grid-template-columns: 100px 100px 100px;
+} 
+
+.top-button-grid {
+    display: grid;
+    grid-column: 3;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .search-icon {
     height: 25px;
+    grid-column: 1;
 }
 
 .notification-icon {
@@ -36,6 +68,11 @@ body {
 .cat-icon-big {
     height: 50px;
     width: 50px;
+    grid-column: 1;
+}
+
+.admin-welcome-text {
+    grid-column: 2;
 }
 
 .new-button, .upload-button, .share-button {
@@ -50,4 +87,8 @@ body {
     background-color: #f1f1f1;
     border-radius: 20px; 
     border: none;
+    height: 25px;
+    width: 500px;
+    justify-self: start;
+    grid-column: 2;
 }
