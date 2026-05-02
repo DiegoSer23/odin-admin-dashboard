@@ -18,10 +18,19 @@ body {
 }
 
 .sidebar {
+    margin-right: 40px;
+    padding: 20px;
+    height: 100%;
     display: grid;
     grid-column: 1;
-    grid-row: 1 / 4;
-    background-color: lightblue;
+    grid-template-rows: auto;
+    row-gap: 40px;
+    background-color: #357EC7;
+}
+
+.main-content {
+    grid-column: 2;
+    
 }
 
 .top-header-grid {
@@ -50,6 +59,64 @@ body {
     display: grid;
     grid-column: 3;
     grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.project-card {
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.card-icons-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: end;
+}
+
+.card-icons-container > * {
+    height: 15px;
+}
+
+.first-item-sidebar, .second-item-sidebar, .third-item-sidebar {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+}
+
+.third-item-sidebar {
+    grid-template-rows: repeat(3, 50px);
+}
+
+.dashboard-icon {
+    height: 50px;
+    grid-column: 1;
+}
+
+.dashboard-text {
+    font-size: 30px;
+    grid-column: 2;
+    color: white;
+}
+
+.second-item-sidebar > img {
+    height: 35px;
+    grid-column: 1;
+}
+
+.third-item-sidebar > img {
+    height: 35px;
+    grid-column: 1;
+}
+
+.sidebar-text {
+    font-size: 24px;
+    grid-column: 2;
+    color: white;
 }
 
 .search-icon {
