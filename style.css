@@ -7,13 +7,13 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr;
 }
 
 .header {
     display: grid;
     height: 150px;
-    grid-column: 2 / 3;
+    grid-column: 2;
     grid-row: 1;
 }
 
@@ -23,6 +23,7 @@ body {
     height: 100%;
     display: grid;
     grid-column: 1;
+    grid-row: 1 / span 2;
     grid-template-rows: auto;
     row-gap: 40px;
     background-color: #357EC7;
@@ -30,7 +31,24 @@ body {
 
 .main-content {
     grid-column: 2;
-    
+    grid-row: 2 ;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+}
+
+.card-grid {
+    grid-column: 1;
+}
+
+.announcements-grid {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.user-grid {
+    grid-column: 2;
+    grid-row: 2;
 }
 
 .top-header-grid {
@@ -68,15 +86,76 @@ body {
     grid-template-rows: 1fr 1fr 1fr;
 }
 
-.project-card {
+.announcements-container {
     display: grid;
     grid-template-rows: auto;
+    width: 200px;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.announcements-container > * {
+    padding: 10px;
+}
+
+.announcements-container > div:nth-child(-n+2) {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);;
+}
+
+.user-container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    width: 200px;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 25px;
+    row-gap: 15px;
+}
+
+.user {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-images {
+    height: 25px;
+    grid-column: 1;
+}
+
+.user-text {
+    grid-column: 2;
+}
+
+.project-card {
+    display: grid;
+    width: 350px;
+    grid-template-rows: auto;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 15px;
+    border-left: 14px solid orange; 
 }
 
 .card-icons-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: end;
+    grid-template-columns: 2fr 40px 40px 40px;
+    justify-items: end;
+}
+
+.star-icon {
+    grid-column: 2;
+}
+
+.watched-icon {
+    grid-column: 3;
+}
+
+.shared-icon {
+    grid-column: 4;
 }
 
 .card-icons-container > * {
@@ -90,6 +169,12 @@ body {
 
 .third-item-sidebar {
     grid-template-rows: repeat(3, 50px);
+}
+
+.main-cont-text {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 30px;
 }
 
 .dashboard-icon {
